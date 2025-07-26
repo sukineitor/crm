@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Barra lateral */
+.sidebar {
+    min-height: 100vh;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Lista de clientes */
+.list-group-item {
+    border: none;
+    border-radius: 5px !important;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.list-group-item.active {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Tarjetas */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-weight: 600;
+}
+
+/* Estados */
+.estado-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.estado-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.estado-badge.active {
+    border: 2px solid #0d6efd;
+}
+
+/* Interacciones */
+.interaccion-item {
+    padding: 10px;
+    border-left: 3px solid #0d6efd;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.interaccion-item.llamada {
+    border-left-color: #198754;
+}
+
+.interaccion-item.email {
+    border-left-color: #0dcaf0;
+}
+
+.interaccion-item.reunion {
+    border-left-color: #ffc107;
+}
+
+/* Recordatorios */
+.recordatorio-item {
+    padding: 10px;
+    background-color: #fff8e1;
+    border-left: 3px solid #ffc107;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.recordatorio-item.pasado {
+    background-color: #fff3f3;
+    border-left-color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .col-md-9 {
+        padding: 20px 15px;
+    }
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
